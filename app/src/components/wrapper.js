@@ -1,4 +1,5 @@
 import React from 'react';
+import Home from './home'
 import {
   BrowserRouter as Router,
   Switch,
