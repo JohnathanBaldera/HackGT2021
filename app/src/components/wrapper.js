@@ -12,13 +12,20 @@ const Wrapper = () => {
     return (
         <div style={styles.pageWrapper}>
             <Router>
-                <div style={styles.navBar}>
-                    <div style={styles.link}>
-                        <Link to="/">Home</Link>
+                <div className="nav-bar">
+                    <div className="nav-title">
+                        <h1><Link to="/">Pet Friendly</Link></h1>
                     </div>
-                    <div style={styles.link}>
-                        <Link to="/profile">Profile</Link>
-                    </div>
+
+                    <ul className="nav-list">
+                        <li className="nav-item">
+                            Search
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/profile">Profile</Link>
+                        </li>
+                    </ul>
+                        
                 </div>
 
                 <Switch>
@@ -26,7 +33,7 @@ const Wrapper = () => {
                         <div>Profile</div>
                     </Route>
                     <Route path="/">
-                        <div>Home</div>
+                        <Home />
                     </Route>
                 </Switch>
             </Router>
@@ -44,25 +51,10 @@ const styles = {
         height: '100%',
         overflow: 'auto',
 
-        backgroundColor: 'gray',
-        display: 'grid',
-        gridTemplateRows: '50px 1fr',
-    },
-
-    navBar: {
         backgroundColor: 'white',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-    },
-
-    link: {
-        height: '100%',
-        width: '100px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+        display: 'grid',
+        gridTemplateRows: 'auto 1fr',
+    }
 }
 
 export default Wrapper;
