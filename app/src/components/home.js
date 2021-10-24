@@ -22,10 +22,10 @@ const Home = () => {
                     <input className="home-search-box-checkout home-inputs" type="date" />
                 </div>
                 <div className="home-search-box-checking-labels">
-                    <label>Check In</label>
+                    <label>Adults</label>
                 </div>
                 <div className="home-search-box-checking-labels">
-                    <label>Check Out</label>
+                    <label>Children</label>
                 </div>
                 <div className="home-search-box-checking-guests">
                     <input className="home-search-box-adults home-inputs" placeholder="1" type="number" />
@@ -44,7 +44,7 @@ const Home = () => {
         </div>
 
         <div className="home-background-image">
-            <img src="" alt="" />
+            <img src="../img/DogInBed.png" alt="Dog in Bed" />
         </div>
 
     </div>
