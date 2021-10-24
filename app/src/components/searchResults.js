@@ -6,6 +6,7 @@ let hotelDescription = "This is a pet friendly hotel"
 let hotelLocation = "Georgia Tech Campus"
 
 const SearchResults = () => {
+
     return (
     <div className="results-container">
         <div className="results-left">

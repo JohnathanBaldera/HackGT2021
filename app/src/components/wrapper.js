@@ -1,8 +1,9 @@
 import React from 'react';
 import Home from './home'
 import SearchResults from "./searchResults"
+import Profile from "./profile"
 import Logo from "../img/Dog Icon.png"
-import Profile from "../img/VectorProfile.png"
+import ProfileImage from "../img/VectorProfile.png"
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,21 +24,22 @@ const Wrapper = () => {
 
                     <ul className="nav-list">
                         <li className="nav-item">
-                            <Link to="/profile"><img src={Profile} alt="link to profile" /></Link>
+                            <Link to="/profile"><img src={ProfileImage} alt="link to profile" /></Link>
                         </li>
+                        <Link to="/searchResults"><img src={ProfileImage} alt="link to profile" /></Link>
                     </ul>
                         
                 </div>
 
                 <Switch>
                     <Route path="/profile">
-                        <div>Profile</div>
-                    </Route>
-                    <Route path="/">
-                        <Home />
+                        <Profile />
                     </Route>
                     <Route path="/searchResults">
                         <SearchResults />
+                    </Route>
+                    <Route path="/">
+                        <Home />
                     </Route>
                 </Switch>
             </Router>
