@@ -24,7 +24,7 @@ app.get('/user/:id', async(req, res) => {
 			'select * from customer where user_id = $1', 
 			[id]
 		);
-		retUser.then(res.json(retUser.rows[0]));
+		res.json(retUser.rows[0]);
 	} catch (err) {
 		console.error(err.message);
 	}
@@ -38,7 +38,7 @@ app.get('/user/:id/pets', async(req, res) => {
 			'select * from pet where user_id = $1',
 			[id]
 		);
-		ret.then(res.json(ret.rows));
+		res.json(ret.rows);
 	} catch (err) {
 		console.error(err.message);
 	}
