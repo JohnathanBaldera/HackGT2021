@@ -7,6 +7,9 @@ create database petfriendly;
 drop table if exists customer;
 create table if not exists customer(
 	user_id serial primary key,
+	username varchar(20),
+	password varchar(20),
+
 	first_name varchar(20),
 	last_name varchar(30),
 	dob date,
@@ -17,7 +20,7 @@ create table if not exists customer(
 	zip char(5)
 );
 
-insert into customer values (DEFAULT, 'John', 'Baldera', '1996-07-04', '81 Georgia Tech Station', 'Atlanta', 'GA', '30332');
+insert into customer values (DEFAULT, 'jbaldera', 'pAsSwOrD', 'John', 'Baldera', '1996-07-04', '81 Georgia Tech Station', 'Atlanta', 'GA', '30332');
 
 drop table if exists pet;
 create table if not exists pet(

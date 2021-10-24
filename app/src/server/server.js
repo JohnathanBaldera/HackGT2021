@@ -44,6 +44,31 @@ app.get('/user/:id/pets', async(req, res) => {
 	}
 })
 
+app.post('/verifyuser', async(req, res) => {
+	try {
+		const { usernameForm, passwordForm } = req.body;
+
+		const expected = await pool.query(
+			'select * from customer where username=$1', 
+			[usernameForm]
+		);
+		const user = expected.rows[0];
+		const expectedPW = expected.rows[0].password;
+
+		if (passwordForm === expectedPW) {
+			const success = true;
+			ret = {success, user}
+			res.json(ret); 
+		} else {
+			const success = false;
+			res.json({success});
+		}
+
+	} catch (err) {
+		console.error(err.message);
+	}
+});
+
 // Start server
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

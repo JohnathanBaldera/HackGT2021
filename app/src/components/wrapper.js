@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Home from './home'
 import {
   BrowserRouter as Router,
@@ -6,9 +6,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Profile from './profile.js';
 
 
 const Wrapper = () => {
+    const [user, setUser] = useState(null);
+    const [loggedIn, setLoggedIn] = useState(false);
+
+
     return (
         <div style={styles.pageWrapper}>
             <Router>
@@ -30,7 +35,7 @@ const Wrapper = () => {
 
                 <Switch>
                     <Route path="/profile">
-                        <div>Profile</div>
+                        <Profile user={user} setUser={setUser} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
                     </Route>
                     <Route path="/">
                         <Home />
