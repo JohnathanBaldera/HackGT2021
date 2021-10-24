@@ -54,6 +54,7 @@ h1 {
   display: flex;
   flex-direction: column;
   background-color: white;
+  max-width: 50%;
 }
 
 .home-search-box-header {
@@ -89,7 +90,7 @@ h1 {
 }
 
 .home-background-image {
-  max-width: 90%;
+  width: 90%;
   margin-left: -3em;
   margin-top: 2em;
   z-index: -1;

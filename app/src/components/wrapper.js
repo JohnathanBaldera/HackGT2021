@@ -26,7 +26,6 @@ const Wrapper = () => {
                         <li className="nav-item">
                             <Link to="/profile"><img src={ProfileImage} alt="link to profile" /></Link>
                         </li>
-                        <Link to="/searchResults"><img src={ProfileImage} alt="link to profile" /></Link>
                     </ul>
                         
                 </div>
