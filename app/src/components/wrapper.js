@@ -1,5 +1,8 @@
 import React from 'react';
 import Home from './home'
+import SearchResults from "./searchResults"
+import Logo from "../img/Dog Icon.png"
+import Profile from "../img/VectorProfile.png"
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,16 +16,14 @@ const Wrapper = () => {
         <div style={styles.pageWrapper}>
             <Router>
                 <div className="nav-bar">
+                    <img src={Logo} alt="Logo" />
                     <div className="nav-title">
                         <h1><Link to="/">Pet Friendly</Link></h1>
                     </div>
 
                     <ul className="nav-list">
                         <li className="nav-item">
-                            Search
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/profile">Profile</Link>
+                            <Link to="/profile"><img src={Profile} alt="link to profile" /></Link>
                         </li>
                     </ul>
                         
@@ -34,6 +35,9 @@ const Wrapper = () => {
                     </Route>
                     <Route path="/">
                         <Home />
+                    </Route>
+                    <Route path="/searchResults">
+                        <SearchResults />
                     </Route>
                 </Switch>
             </Router>
