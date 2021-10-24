@@ -1,4 +1,5 @@
 import React from 'react';
+import DogInBed from "../img/DogInBed.png"
 
 const Home = () => {
     return (
@@ -44,7 +45,7 @@ const Home = () => {
         </div>
 
         <div className="home-background-image">
-            <img src="../img/DogInBed.png" alt="Dog in Bed" />
+            <img src={DogInBed} alt="Dog in Bed" className="home-background-image" />
         </div>
 
     </div>

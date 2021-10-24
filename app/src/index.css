@@ -46,13 +46,15 @@ h1 {
 
 .home-search-box {
   margin-left: 5em;
-  margin-top: 5em;
+  margin-top: 10em;
   box-shadow: 3px 3px 2px 5px #303030;
   height: max-content;
   padding: 1em;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  background-color: white;
+  max-width: 50%;
 }
 
 .home-search-box-header {
@@ -88,7 +90,10 @@ h1 {
 }
 
 .home-background-image {
-
+  width: 90%;
+  margin-left: -3em;
+  margin-top: 2em;
+  z-index: -1;
 }
 
 .home-search-grid {
@@ -111,4 +116,9 @@ h1 {
   padding: 1em 45%;
   border-radius: 10px;
   font-weight: 700;
+}
+
+/* SearchResults Styles */
+.results-container {
+  display: flex;
 }
