@@ -10,7 +10,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Profile from './profile.js';
 
 
 const Wrapper = () => {
